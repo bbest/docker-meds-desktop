@@ -1,0 +1,16 @@
+rstudio.localhost {
+  reverse_proxy rstudio:8787
+}
+
+shiny.localhost {
+  reverse_proxy rstudio:3838
+}
+
+api.localhost {
+  reverse_proxy rstudio:8888
+}
+
+localhost {
+  root * /share/www
+	file_server
+}
